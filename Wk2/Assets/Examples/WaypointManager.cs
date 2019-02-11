@@ -22,7 +22,9 @@ public class WaypointManager : MonoBehaviour {
             if (waypoints.Count == 0)
             {
                 waypoints.Add(GameObject.Find("Model").AddComponent<Bezier_First>());
+                
                 waypoints[0].Init(null, null);
+             
             }
             else
             {
@@ -110,20 +112,20 @@ public class WaypointEditor : Editor
 
         WaypointManager _myWPM = (WaypointManager)target;
 
-        if (GUILayout.Button("Make a waypoint"))
+        if (GUILayout.Button("Make a curve"))
             _myWPM.MakeWaypoint();
 
-        if (GUILayout.Button("Close waypoint loop"))
+        if (GUILayout.Button("Close loop"))
             _myWPM.CloseLoop();
 
-        if (GUILayout.Button("Remove waypoint"))
+        if (GUILayout.Button("Remove curve"))
             _myWPM.RemoveLastPoint();
 
         if (GUILayout.Button("Recalculate linear distance"))
             foreach (Bezier_Base b in _myWPM.waypoints)
                 b.RecalculateLinearDist();
 
-        if (GUILayout.Button("Get lost waypoints"))
+        if (GUILayout.Button("Get lost curves"))
             _myWPM.GrabLostWaypoints();
     }
 }

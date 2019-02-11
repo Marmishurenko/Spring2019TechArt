@@ -8,6 +8,7 @@ public class Bezier_Base : MonoBehaviour {
     public Vector3 startTangent = Vector3.zero;
     public Vector3 endPoint = Vector3.right * 2;
     public Vector3 endTangent = Vector3.zero;
+  
 
     public float linearDist;
 

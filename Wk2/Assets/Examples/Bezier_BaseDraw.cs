@@ -19,8 +19,15 @@ public class BezierDraw_First : Editor
         bb.endTangent = Handles.PositionHandle(bb.endTangent, Quaternion.identity);
 
         Handles.DrawBezier(bb.startPoint, bb.endPoint, bb.startTangent, bb.endTangent, Color.red, null, 2f);
-        Debug.DrawLine(bb.startPoint, bb.startTangent);
-        Debug.DrawLine(bb.endPoint, bb.endTangent);
+        //Debug.DrawLine(Handles, bb.startTangent);
+        Handles.color = Color.cyan;
+        Handles.DrawLine(bb.startPoint, bb.startTangent);
+        Handles.DrawLine(bb.endPoint,bb.endTangent );
+        Handles.color = Color.white;
+        Handles.SphereHandleCap(0,bb.startTangent,Quaternion.identity,7f, EventType.Repaint);
+        Handles.SphereHandleCap(0, bb.endTangent, Quaternion.identity, 7f, EventType.Repaint);
+        //Debug.DrawLine(Handles, bb.startTangent);
+        //Debug.DrawLine(bb.endPoint, bb.endTangent);
     }
 }
 
@@ -39,11 +46,22 @@ public class BezierDraw_Intermediate : Editor
 
         bb.startTangent = oppositeDir;
 
+        EditorGUI.BeginChangeCheck();
+
         bb.endPoint = Handles.PositionHandle(bb.endPoint, Quaternion.identity);
         bb.endTangent = Handles.PositionHandle(bb.endTangent, Quaternion.identity);
 
         Handles.DrawBezier(bb.startPoint, bb.endPoint, bb.startTangent, bb.endTangent, Color.red, null, 2f);
-        Debug.DrawLine(bb.endPoint, bb.endTangent);
+        Handles.color = Color.cyan;
+        Handles.DrawLine(bb.startPoint, bb.startTangent);
+        Handles.DrawLine(bb.endPoint, bb.endTangent);
+        Handles.color = Color.white;
+        if (EditorGUI.EndChangeCheck())
+        {
+            Undo.RecordObject(bb, "Bezier_Intermediate Handle Undo");
+        }
+        Handles.SphereHandleCap(0, bb.startTangent, Quaternion.identity, 7f, EventType.Repaint);
+        Handles.SphereHandleCap(0, bb.endTangent, Quaternion.identity, 7f, EventType.Repaint);
     }
 }
 
