@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CheckCol : MonoBehaviour
 {
-    public bool isHitTrap = false;
+    public static bool isHitTrap = false;
     // Start is called before the first frame update
     void Start()
     {
