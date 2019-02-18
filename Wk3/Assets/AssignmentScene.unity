@@ -17618,9 +17618,9 @@ MonoBehaviour:
   pitchLowerLimit: -60
   fovAtUp: 0
   fovAtDown: 0
-  shakeAmount: 0.62
-  shakeDur: 0.58
-  decreaseFactor: 1.54
+  shakeAmount: 0.35
+  shakeDur: 0.43
+  decreaseFactor: 0.1
   radiusToImportantObj: 4.19
   playerHeight: 0
 --- !u!1001 &1481674721

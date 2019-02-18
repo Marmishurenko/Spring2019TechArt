@@ -43,7 +43,7 @@ public class ThirdPersonCameraController : MonoBehaviour
     Vector3 curTarget = Vector3.zero;
      float distanceToImportantObj;
 
-    enum GameState { Auto, Manual };
+    enum GameState { Auto, Manual, ProcessOOI };
 
     #region Persistent Outputs
     //Positions
@@ -59,15 +59,15 @@ public class ThirdPersonCameraController : MonoBehaviour
 
 
     //to do for the assignment
-    // make camera see ooj and hover on top of it
+    // make camera see ooj done
     // make camera react to traps (shake) done
-    //Looking straight ahead as the avatar approaches a cliff - nesky mistake1
-    // Using the same camera distance for all angles. 
-    //  Using the same field-of-view for worm's eye angles and standard angles. 
-    // Focusing only on the avatar.
-    //Translating or rotating up and down when the avatar jumps.
-    //use raycast spherecast physics 
-    // make all of this states
+    //Looking straight ahead as the avatar approaches a cliff - nesky mistake1 done
+    // Using the same camera distance for all angles. done
+    //  Using the same field-of-view for worm's eye angles and standard angles. done
+    // Focusing only on the avatar. done sort of
+    //Translating or rotating up and down when the avatar jumps. not done
+    //use raycast spherecast physics done
+    // make all of this states done
 
 
     private void Awake()
@@ -92,14 +92,21 @@ public class ThirdPersonCameraController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space)||CheckCol.isHitTrap)
         {
+            GameState myState = GameState.ProcessOOI;
             StopAllCoroutines();
             StartCoroutine(ShakeCamera());
         }
 
         if (Input.GetMouseButton(1))
+        {
+            GameState myState = GameState.Manual;
             _ManualUpdate();
+        }
         else
+        {
+            GameState myState = GameState.Auto;
             _AutoUpdate();
+        }
     }
 
 
@@ -226,9 +233,11 @@ public class ThirdPersonCameraController : MonoBehaviour
 
         initOffset = avatarObservationOffset_Base;
 
-       for (float i = 0; i<1; i += Time.deltaTime / 2f)
+       for (float i = 0; i<1; i += Time.deltaTime / decreaseFactor)
         {
-            avatarObservationOffset_Base = Random.insideUnitSphere * shakeAmount;
+            avatarObservationOffset_Base.x =  Random.insideUnitSphere.x * shakeAmount;
+            
+            avatarObservationOffset_Base.z = Random.insideUnitSphere.z * shakeAmount;
 
             yield return null;
 
