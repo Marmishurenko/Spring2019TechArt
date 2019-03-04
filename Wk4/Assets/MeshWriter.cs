@@ -38,25 +38,37 @@ public class MeshWriter : MonoBehaviour
     {
         _myMesh = new Mesh();
 
-        _verts = new Vector3[3];
+        _verts = new Vector3[4];
         _verts[0] = Vector3.zero;
-        _verts[1] = Vector3.right * (Mathf.Sin(Time.time) + 1);
-        _verts[2] = Vector3.up * (Mathf.Cos(Time.time) + 1);
+        _verts[1] = Vector3.right;
+        _verts[2] = Vector3.up ;
+        _verts[3] = Vector3.up+ Vector3.right;
+       
 
-        _tris = new int[3];
+
+
+        _tris = new int[6];
         _tris[0] = 0;
         _tris[1] = 2;
         _tris[2] = 1;
+        _tris[3] = 2;
+        _tris[4] = 3;
+        _tris[5] = 1;
 
-        _normals = new Vector3[3];
-        _normals[0] = Vector3.forward;
-        _normals[1] = Vector3.forward;
-        _normals[2] = Vector3.forward;
 
-        _uVs = new Vector2[3];
+
+        _normals = new Vector3[4];
+        _normals[0] = -Vector3.forward;
+        _normals[1] = -Vector3.forward;
+        _normals[2] = -Vector3.forward;
+        _normals[3] = -Vector3.forward;
+     
+
+        _uVs = new Vector2[4];
         _uVs[0] = new Vector2(0, 0);
         _uVs[1] = new Vector2(1, 0);
         _uVs[2] = new Vector2(0, 1);
+        _uVs[3] = new Vector2(1, 1);
     }
 
     private void _RandomUVs()
@@ -73,17 +85,18 @@ public class MeshWriter : MonoBehaviour
         _myMesh.triangles = _tris;
         _myMesh.normals = _normals;
         _myMesh.uv = _uVs;
-
+        _myMesh.RecalculateNormals();
         _myMF.mesh = _myMesh;
     }
 
     private void Update()
     {
         _verts[0] = Vector3.zero;
-        _verts[1] = Vector3.right * (Mathf.Sin(Time.time) + 3);
-        _verts[2] = Vector3.up * (Mathf.Cos(Time.time) + 3);
+        _verts[1] = Vector3.right;
+        _verts[2] = Vector3.up;
+        _verts[3] = Vector3.up + Vector3.right;
 
-        _RandomUVs();
+        //_RandomUVs();
 
         _ApplyMesh();
     }
