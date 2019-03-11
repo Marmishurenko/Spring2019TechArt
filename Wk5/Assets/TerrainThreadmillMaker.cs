@@ -48,6 +48,7 @@ public class TerrainThreadmillMaker : MonoBehaviour
             {
                 Vector3 pos = new Vector3((x * chunkSize + startPos.x), 0, (z * chunkSize + startPos.z));
                 GameObject c = (GameObject)Instantiate(chunkPrefab, pos, Quaternion.identity);
+                
 
                 string chunkName = "Chunk_" + ((int)(pos.x)).ToString() + "_" + ((int)(pos.z)).ToString();
                 c.name = chunkName;
@@ -83,6 +84,7 @@ public class TerrainThreadmillMaker : MonoBehaviour
                     if (!chunksHashTable.ContainsKey(chunkName))
                     {
                         GameObject c = (GameObject)Instantiate(chunkPrefab, pos, Quaternion.identity);
+                     
                         c.name = chunkName;
                         Chunk tile = new Chunk(c, updateTime);
                         chunksHashTable.Add(chunkName, tile);

@@ -136,7 +136,7 @@ public class ChunkExample : MonoBehaviour
                 verts[i] = new Vector3(xRelative, y0, zRelative);
 
                 // used the cross product of partial derivatives to compute the normal
-                var step = 0.02f;
+                var step = 0.01f;
 
                 var y1 = GetY(zCoordinate + step, xCoordinate);
                 var diffZ = new Vector3(0, y1 - y0, step);
