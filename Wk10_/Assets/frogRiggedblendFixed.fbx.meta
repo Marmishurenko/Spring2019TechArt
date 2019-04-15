@@ -1,0 +1,205 @@
+fileFormatVersion: 2
+guid: 6b6854d331ff2014791f1bd89da7f459
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Arm.L
+    100002: Arm.R
+    100004: Armature
+    100006: Clav.L
+    100008: Clav.R
+    100010: Foot.L
+    100012: Foot.R
+    100014: Foot2.L
+    100016: Foot2.R
+    100018: Forearm.L
+    100020: Forearm.R
+    100022: frogOBJ.002
+    100024: //RootNode
+    100026: Head
+    100028: Head_end
+    100030: Hip.L
+    100032: Hip.R
+    100034: IndexFinger.L
+    100036: IndexFinger.L_end
+    100038: IndexFinger.R
+    100040: IndexFinger.R_end
+    100042: IndexToe.L
+    100044: IndexToe.L_end
+    100046: IndexToe.R
+    100048: IndexToe.R_end
+    100050: Knee.L
+    100052: Knee.R
+    100054: LowJaw
+    100056: LowJaw_end
+    100058: MiddleFinger.L
+    100060: MiddleFinger.L_end
+    100062: MiddleFinger.R
+    100064: MiddleFinger.R_end
+    100066: MiddleToe.L
+    100068: MiddleToe.L_end
+    100070: MiddleToe.R
+    100072: MiddleToe.R_end
+    100074: Neck
+    100076: Pelvis
+    100078: PinkyFinger.L
+    100080: PinkyFinger.L_end
+    100082: PinkyFinger.R
+    100084: PinkyFinger.R_end
+    100086: PinkyToe.L
+    100088: PinkyToe.L_end
+    100090: PinkyToe.R
+    100092: PinkyToe.R_end
+    100094: Shoulder.L
+    100096: Shoulder.R
+    100098: Spiine2
+    100100: Spine1
+    100102: Thigh.L
+    100104: Thigh.R
+    100106: TopJaw
+    100108: TopJaw_end
+    400000: Arm.L
+    400002: Arm.R
+    400004: Armature
+    400006: Clav.L
+    400008: Clav.R
+    400010: Foot.L
+    400012: Foot.R
+    400014: Foot2.L
+    400016: Foot2.R
+    400018: Forearm.L
+    400020: Forearm.R
+    400022: frogOBJ.002
+    400024: //RootNode
+    400026: Head
+    400028: Head_end
+    400030: Hip.L
+    400032: Hip.R
+    400034: IndexFinger.L
+    400036: IndexFinger.L_end
+    400038: IndexFinger.R
+    400040: IndexFinger.R_end
+    400042: IndexToe.L
+    400044: IndexToe.L_end
+    400046: IndexToe.R
+    400048: IndexToe.R_end
+    400050: Knee.L
+    400052: Knee.R
+    400054: LowJaw
+    400056: LowJaw_end
+    400058: MiddleFinger.L
+    400060: MiddleFinger.L_end
+    400062: MiddleFinger.R
+    400064: MiddleFinger.R_end
+    400066: MiddleToe.L
+    400068: MiddleToe.L_end
+    400070: MiddleToe.R
+    400072: MiddleToe.R_end
+    400074: Neck
+    400076: Pelvis
+    400078: PinkyFinger.L
+    400080: PinkyFinger.L_end
+    400082: PinkyFinger.R
+    400084: PinkyFinger.R_end
+    400086: PinkyToe.L
+    400088: PinkyToe.L_end
+    400090: PinkyToe.R
+    400092: PinkyToe.R_end
+    400094: Shoulder.L
+    400096: Shoulder.R
+    400098: Spiine2
+    400100: Spine1
+    400102: Thigh.L
+    400104: Thigh.R
+    400106: TopJaw
+    400108: TopJaw_end
+    2100000: No Name
+    4300000: frogOBJ.002
+    9500000: //RootNode
+    13700000: frogOBJ.002
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
