@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: run0
+  m_Name: Walk3
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -19,7 +19,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 7.392, y: -90.61101, z: -79.423004}
+        value: {x: -23.432001, y: 72.219, z: -82.560005}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -29,13 +29,13 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Armature/Pelvis/Hip.R/Thigh.R/Knee.R/Foot.R/Foot2.R
+    path: Armature/Pelvis.R/UpperLeg.R
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -67.899, y: -23.239, z: -164.175}
+        value: {x: 27.112001, y: -147.932, z: 15.029}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -45,13 +45,13 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Armature/Pelvis/Hip.L/Thigh.L
+    path: Armature/Pelvis.R/UpperLeg.R/LowerLeg.R
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -75.005005, y: -63.971004, z: 8.055}
+        value: {x: 72.175, y: 124.742004, z: -14.406001}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -61,13 +61,13 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Armature/Pelvis/Hip.L/Thigh.L/Knee.L
+    path: Armature/Pelvis.R/UpperLeg.R/LowerLeg.R/Foot.R
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -5.2120004, y: -45.853, z: -5.9080005}
+        value: {x: -7.07, y: -30.608002, z: 61.612003}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -77,13 +77,13 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Armature/Pelvis/Hip.L/Thigh.L/Knee.L/Foot.L
+    path: Armature/Pelvis.L/UpperLeg.L
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -51.187004, y: -133.117, z: 8.868}
+        value: {x: 43.712, y: 68.281006, z: -130.68001}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -93,24 +93,8 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Armature/Pelvis/Hip.L/Thigh.L/Knee.L/Foot.L/Foot2.L
-  m_PositionCurves:
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: {x: -0.000000016298147, y: 0.009500091, z: 0.000000014901161}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0, y: 0.33333334, z: 0.33333334}
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    path: Armature/Pelvis/Hip.L/Thigh.L/Knee.L/Foot.L
+    path: Armature/Pelvis.L/UpperLeg.L/LowerLeg.L
+  m_PositionCurves: []
   m_ScaleCurves: []
   m_FloatCurves: []
   m_PPtrCurves: []
@@ -122,42 +106,35 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 4189902512
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 180474688
+      path: 3314926454
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 4205939172
+      path: 622068159
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3684810646
+      path: 3351774057
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 4189902512
+      path: 3669213431
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 24752539
+      path: 3593712942
       attribute: 4
       script: {fileID: 0}
       typeID: 4
@@ -190,7 +167,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 7.392
+        value: -23.432001
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -201,7 +178,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Armature/Pelvis/Hip.R/Thigh.R/Knee.R/Foot.R/Foot2.R
+    path: Armature/Pelvis.R/UpperLeg.R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -209,7 +186,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -90.61101
+        value: 72.219
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -220,7 +197,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Armature/Pelvis/Hip.R/Thigh.R/Knee.R/Foot.R/Foot2.R
+    path: Armature/Pelvis.R/UpperLeg.R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -228,7 +205,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -79.423004
+        value: -82.560005
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -239,7 +216,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Armature/Pelvis/Hip.R/Thigh.R/Knee.R/Foot.R/Foot2.R
+    path: Armature/Pelvis.R/UpperLeg.R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -247,7 +224,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -67.899
+        value: 27.112001
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -258,7 +235,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Armature/Pelvis/Hip.L/Thigh.L
+    path: Armature/Pelvis.R/UpperLeg.R/LowerLeg.R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -266,7 +243,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -23.239
+        value: -147.932
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -277,7 +254,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Armature/Pelvis/Hip.L/Thigh.L
+    path: Armature/Pelvis.R/UpperLeg.R/LowerLeg.R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -285,7 +262,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -164.175
+        value: 15.029
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -296,7 +273,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Armature/Pelvis/Hip.L/Thigh.L
+    path: Armature/Pelvis.R/UpperLeg.R/LowerLeg.R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -304,7 +281,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -75.005005
+        value: 72.175
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -315,7 +292,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Armature/Pelvis/Hip.L/Thigh.L/Knee.L
+    path: Armature/Pelvis.R/UpperLeg.R/LowerLeg.R/Foot.R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -323,7 +300,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -63.971004
+        value: 124.742004
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -334,7 +311,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Armature/Pelvis/Hip.L/Thigh.L/Knee.L
+    path: Armature/Pelvis.R/UpperLeg.R/LowerLeg.R/Foot.R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -342,7 +319,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 8.055
+        value: -14.406001
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -353,7 +330,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Armature/Pelvis/Hip.L/Thigh.L/Knee.L
+    path: Armature/Pelvis.R/UpperLeg.R/LowerLeg.R/Foot.R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -361,64 +338,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -0.000000016298147
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalPosition.x
-    path: Armature/Pelvis/Hip.L/Thigh.L/Knee.L/Foot.L
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.009500091
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalPosition.y
-    path: Armature/Pelvis/Hip.L/Thigh.L/Knee.L/Foot.L
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.000000014901161
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalPosition.z
-    path: Armature/Pelvis/Hip.L/Thigh.L/Knee.L/Foot.L
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: -5.2120004
+        value: -7.07
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -429,7 +349,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Armature/Pelvis/Hip.L/Thigh.L/Knee.L/Foot.L
+    path: Armature/Pelvis.L/UpperLeg.L
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -437,7 +357,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -45.853
+        value: -30.608002
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -448,7 +368,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Armature/Pelvis/Hip.L/Thigh.L/Knee.L/Foot.L
+    path: Armature/Pelvis.L/UpperLeg.L
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -456,7 +376,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -5.9080005
+        value: 61.612003
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -467,7 +387,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Armature/Pelvis/Hip.L/Thigh.L/Knee.L/Foot.L
+    path: Armature/Pelvis.L/UpperLeg.L
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -475,7 +395,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -51.187004
+        value: 43.712
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -486,7 +406,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Armature/Pelvis/Hip.L/Thigh.L/Knee.L/Foot.L/Foot2.L
+    path: Armature/Pelvis.L/UpperLeg.L/LowerLeg.L
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -494,7 +414,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -133.117
+        value: 68.281006
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -505,7 +425,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Armature/Pelvis/Hip.L/Thigh.L/Knee.L/Foot.L/Foot2.L
+    path: Armature/Pelvis.L/UpperLeg.L/LowerLeg.L
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -513,7 +433,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 8.868
+        value: -130.68001
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -524,7 +444,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Armature/Pelvis/Hip.L/Thigh.L/Knee.L/Foot.L/Foot2.L
+    path: Armature/Pelvis.L/UpperLeg.L/LowerLeg.L
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves:
@@ -535,7 +455,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Armature/Pelvis/Hip.R/Thigh.R/Knee.R/Foot.R/Foot2.R
+    path: Armature/Pelvis.R/UpperLeg.R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -545,7 +465,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Armature/Pelvis/Hip.R/Thigh.R/Knee.R/Foot.R/Foot2.R
+    path: Armature/Pelvis.R/UpperLeg.R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -555,27 +475,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Armature/Pelvis/Hip.R/Thigh.R/Knee.R/Foot.R/Foot2.R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: Armature/Pelvis/Hip.L/Thigh.L/Knee.L
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: Armature/Pelvis/Hip.L/Thigh.L/Knee.L
+    path: Armature/Pelvis.R/UpperLeg.R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -585,17 +485,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Armature/Pelvis/Hip.L/Thigh.L/Knee.L
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: Armature/Pelvis/Hip.L/Thigh.L
+    path: Armature/Pelvis.R/UpperLeg.R/LowerLeg.R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -605,7 +495,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Armature/Pelvis/Hip.L/Thigh.L
+    path: Armature/Pelvis.R/UpperLeg.R/LowerLeg.R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -615,7 +505,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Armature/Pelvis/Hip.L/Thigh.L
+    path: Armature/Pelvis.R/UpperLeg.R/LowerLeg.R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -625,7 +515,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Armature/Pelvis/Hip.L/Thigh.L/Knee.L/Foot.L
+    path: Armature/Pelvis.R/UpperLeg.R/LowerLeg.R/Foot.R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -635,7 +525,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Armature/Pelvis/Hip.L/Thigh.L/Knee.L/Foot.L
+    path: Armature/Pelvis.R/UpperLeg.R/LowerLeg.R/Foot.R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -645,7 +535,27 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Armature/Pelvis/Hip.L/Thigh.L/Knee.L/Foot.L
+    path: Armature/Pelvis.R/UpperLeg.R/LowerLeg.R/Foot.R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: Armature/Pelvis.L/UpperLeg.L
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Armature/Pelvis.L/UpperLeg.L
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -655,7 +565,17 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Armature/Pelvis/Hip.L/Thigh.L/Knee.L/Foot.L/Foot2.L
+    path: Armature/Pelvis.L/UpperLeg.L
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Armature/Pelvis.L/UpperLeg.L/LowerLeg.L
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -665,7 +585,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Armature/Pelvis/Hip.L/Thigh.L/Knee.L/Foot.L/Foot2.L
+    path: Armature/Pelvis.L/UpperLeg.L/LowerLeg.L
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -675,7 +595,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Armature/Pelvis/Hip.L/Thigh.L/Knee.L/Foot.L/Foot2.L
+    path: Armature/Pelvis.L/UpperLeg.L/LowerLeg.L
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0
