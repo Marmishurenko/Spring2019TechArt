@@ -1,0 +1,225 @@
+fileFormatVersion: 2
+guid: 111ed030b7a9dbd46bfb6d7f77f94d84
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: archs
+    100002: bridge
+    100004: clocks
+    100006: E_platform
+    100008: E_Wall
+    100010: floor
+    100012: hek
+    100014: libertyFace
+    100016: mainTunnelsIn
+    100018: mesh1036264738
+    100020: mesh1636771195
+    100022: mesh1814306106
+    100024: mesh72411206
+    100026: N_Rubble
+    100028: //RootNode
+    100030: platform
+    100032: rails
+    100034: REF
+    100036: scoreBoard
+    100038: SE_Wall
+    100040: SW_Wall
+    100042: trains
+    100044: tunnels
+    100046: W_Platform
+    100048: tunnels_2
+    100050: tunnel
+    100052: actualArcs
+    400000: archs
+    400002: bridge
+    400004: clocks
+    400006: E_platform
+    400008: E_Wall
+    400010: floor
+    400012: hek
+    400014: libertyFace
+    400016: mainTunnelsIn
+    400018: mesh1036264738
+    400020: mesh1636771195
+    400022: mesh1814306106
+    400024: mesh72411206
+    400026: N_Rubble
+    400028: //RootNode
+    400030: platform
+    400032: rails
+    400034: REF
+    400036: scoreBoard
+    400038: SE_Wall
+    400040: SW_Wall
+    400042: trains
+    400044: tunnels
+    400046: W_Platform
+    400048: tunnels_2
+    400050: tunnel
+    400052: actualArcs
+    2100000: vcol_MAS
+    2100002: mat13
+    2100004: mat14
+    2300000: archs
+    2300002: bridge
+    2300004: clocks
+    2300006: E_platform
+    2300008: E_Wall
+    2300010: floor
+    2300012: hek
+    2300014: libertyFace
+    2300016: mainTunnelsIn
+    2300018: mesh1036264738
+    2300020: mesh1636771195
+    2300022: mesh1814306106
+    2300024: mesh72411206
+    2300026: N_Rubble
+    2300028: platform
+    2300030: rails
+    2300032: scoreBoard
+    2300034: SE_Wall
+    2300036: SW_Wall
+    2300038: trains
+    2300040: tunnels
+    2300042: W_Platform
+    2300044: tunnels_2
+    2300046: tunnel
+    2300048: actualArcs
+    3300000: archs
+    3300002: bridge
+    3300004: clocks
+    3300006: E_platform
+    3300008: E_Wall
+    3300010: floor
+    3300012: hek
+    3300014: libertyFace
+    3300016: mainTunnelsIn
+    3300018: mesh1036264738
+    3300020: mesh1636771195
+    3300022: mesh1814306106
+    3300024: mesh72411206
+    3300026: N_Rubble
+    3300028: platform
+    3300030: rails
+    3300032: scoreBoard
+    3300034: SE_Wall
+    3300036: SW_Wall
+    3300038: trains
+    3300040: tunnels
+    3300042: W_Platform
+    3300044: tunnels_2
+    3300046: tunnel
+    3300048: actualArcs
+    4300000: libertyFace
+    4300002: tunnels
+    4300004: clocks
+    4300006: E_Wall
+    4300008: archs
+    4300010: mainTunnelsIn
+    4300012: SW_Wall
+    4300014: SE_Wall
+    4300016: bridge
+    4300018: N_Rubble
+    4300020: trains
+    4300022: E_platform
+    4300024: W_Platform
+    4300026: platform
+    4300028: floor
+    4300030: mesh72411206
+    4300032: mesh1814306106
+    4300034: mesh1036264738
+    4300036: mesh1636771195
+    4300038: scoreBoard
+    4300040: hek
+    4300042: rails
+    4300044: tunnels_2
+    4300046: tunnel
+    4300048: actualArcs
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vcol_MAS
+    second: {fileID: 2100000, guid: e16170ba8ba551b45b3584d2e490dd2a, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
