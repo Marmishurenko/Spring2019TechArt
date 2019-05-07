@@ -1,4 +1,85 @@
 Release Notes:
+v1.6.4 rev 00:
+* Fixes:
+    * 'Indirect Diffuse Light' node now works on the HD SRP templates
+    * Fixed memory leak on closing ASE windows
+    * Fixed port define issue with linked ports over template options (API)
+    * Fixed loading issue on 'Reconstruct World Position From Depth' shader function
+
+v1.6.3 rev 09:
+* Fixes:
+    * Added missing ase_frag_input tag on Lightweight Unlit SRP template
+    * Fixed compiler issues when using 'Face' and 'Switch by Face' nodes on Vertex Ports
+
+* Improvements:
+    * Minor tweak on Simple GPU Instancing sample for GPU Instancing behavior to be more evident
+
+v1.6.3 rev 08:
+* Improvements:
+    * Standard Surface custom ASE shadow caster can now be turned off
+        * Toggle on new 'Use Default Shadowcaster' option over Rendering Options group
+
+* Fixes:
+    * Nodes 'Face' and 'Switch by Face' now properly work over the HD Unlit template
+        * Fixed issue on missing ase_frag_input tags over HD Unlit
+    * Template Port Options can now be properly registered over SubShader (API)
+
+v1.6.3 rev 07:
+* Fixes:
+    * Removed unnecessary code being used when on Custom Lighting 
+    * Fixed 'Light Color' node not being correctly reset when on subtractive lightmaps
+        * Removed gi.light.color usage from Blinn Phong Light shader function as it was a temporary fix for the above
+
+v1.6.3 rev 06:
+* Fixes:
+    * Fixed issues on 'Light Attenuation' node over Lightweight SRP
+        * Removed incorrect N.L contribution 
+        * Fixed issue on duplicate variables when using multiple nodes
+
+v1.6.3 rev 05:
+* New Sample:
+    * SRP HD Omni Decal
+
+* Fixes:
+    * 'Indirect Diffuse Light', 'Indirect Specular Light' and 'Light Attenuation' now works on Lightweight SRP
+    * Fixed issue on 'Screen Position' node previewer when on Screen Mode
+    * Fixed 'Screen Depth' node issue over Particle Alpha Blended template
+
+* Improvements:
+    * 'Static Switch' nodes now have a Reference mode
+        * Can use other nodes as reference, similar to 'Texture Sample' node
+    * Minor cleanup on 'Reconstruct World Position From Depth' shader function
+    * Can set shader functions as hidden so it wont show on context menu
+        * Activate Hidden toggle over shader function General options
+
+v1.6.3 rev 04:
+* Fixes:
+    * Minor fix on Screen Space Detail sample
+    * Fixed issue on instanced surface terrains not being able to be picked/selected
+    * Fixed issue with lightmaps and instanced standard surface terrains
+    * Fixed issue with 'Four Splats First Pass Terrain' shader function on default templates
+    * Fixed issue with duplicate local variables on 'Texture Coordinates'
+    * Fixed issue on duplicate ST variable when using Particle Texture Parameter over Particles template
+
+* Improvements:
+    * 'Switch By Pipeline' node now takes default template and surface into account
+    * UsePasses can be directly registered by nodes on data collector(API)
+    * ASE Custom Shader Inspector now also shows SRP Batcher compatibility status
+
+v1.6.3 rev 03:
+* Fixes:
+    * Fixed issues with Custom Lighting on Subtractive Lighting Mode
+    * Fixed issue on Diffusion Profile Id not being correctly written when Transmission is activated on HD Lit template
+
+v1.6.3 rev 02:
+* Fixes:
+    * Fixed issue with Mosaic Effect PPS sample not opening correctly on Unity 2018.1 and 2018.2
+    * Fixed issue on Multi Pass Distortion sample not taking skybox into account
+
+* Improvements:
+    * User can now specify sub-shader tags 
+        * Moved RenderType tag to sub-shader level
+
 v1.6.3 rev 01:
 * Fixes:
     * Fixed issue on screen position calculation across all templates

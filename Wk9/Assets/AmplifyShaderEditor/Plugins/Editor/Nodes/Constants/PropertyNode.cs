@@ -18,7 +18,7 @@ namespace AmplifyShaderEditor
 
 	public enum VariableMode
 	{
-		Create,
+		Create = 0,
 		Fetch
 	}
 

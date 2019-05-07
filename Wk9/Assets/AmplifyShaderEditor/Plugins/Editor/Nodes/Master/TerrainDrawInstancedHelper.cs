@@ -104,6 +104,41 @@ namespace AmplifyShaderEditor
 			"}\n"
 		};
 
+		private readonly string ApplyMeshModificationInstructionStandard = "ApplyMeshModification({0});";
+		private readonly string[] ApplyMeshModificationFunctionStandard =
+		{
+			"void ApplyMeshModification( inout {0} v )",
+			"#if defined(UNITY_INSTANCING_ENABLED) && !defined(SHADER_API_D3D11_9X)",
+			"\tfloat2 patchVertex = v.vertex.xy;",
+			"\tfloat4 instanceData = UNITY_ACCESS_INSTANCED_PROP(Terrain, _TerrainPatchInstanceData);",
+			"\t",
+			"\tfloat4 uvscale = instanceData.z * _TerrainHeightmapRecipSize;",
+			"\tfloat4 uvoffset = instanceData.xyxy * uvscale;",
+			"\tuvoffset.xy += 0.5f * _TerrainHeightmapRecipSize.xy;",
+			"\tfloat2 sampleCoords = (patchVertex.xy * uvscale.xy + uvoffset.xy);",
+			"\t",
+			"\tfloat hm = UnpackHeightmap(tex2Dlod(_TerrainHeightmapTexture, float4(sampleCoords, 0, 0)));",
+			"\tv.vertex.xz = (patchVertex.xy + instanceData.xy) * _TerrainHeightmapScale.xz * instanceData.z;",
+			"\tv.vertex.y = hm * _TerrainHeightmapScale.y;",
+			"\tv.vertex.w = 1.0f;",
+			"\t",
+			"\tv.texcoord.xy = (patchVertex.xy * uvscale.zw + uvoffset.zw);",
+			"\tv.texcoord3 = v.texcoord2 = v.texcoord1 = v.texcoord;",
+			"\t",
+			"\t#ifdef TERRAIN_INSTANCED_PERPIXEL_NORMAL",
+			"\t\tv.normal = float3(0, 1, 0);",
+			"\t\t//data.tc.zw = sampleCoords;",
+			"\t#else",
+			"\t\tfloat3 nor = tex2Dlod(_TerrainNormalmapTexture, float4(sampleCoords, 0, 0)).xyz;",
+			"\t\tv.normal = 2.0f * nor - 1.0f;",
+			"\t#endif",
+			"#endif",
+		};
+		private readonly string[] AdditionalUsePasses =
+		{
+			"Hidden/Nature/Terrain/Utilities/PICKING",
+			"Hidden/Nature/Terrain/Utilities/SELECTION"
+		};
 		private readonly string DrawInstancedLabel = "Instanced Terrain";
 #endif
 		[SerializeField]
@@ -121,6 +156,11 @@ namespace AmplifyShaderEditor
 #if UNITY_2018_1_OR_NEWER
 			if( m_enable )
 			{
+				for( int i = 0; i < AdditionalUsePasses.Length; i++ )
+				{
+					dataCollector.AddUsePass( AdditionalUsePasses[ i ], false );
+				}
+
 				for( int i = 0; i < InstancedPragmas.Length; i++ )
 				{
 					dataCollector.AddToPragmas( -1, InstancedPragmas[ i ] );
@@ -219,41 +259,54 @@ namespace AmplifyShaderEditor
 #if UNITY_2018_1_OR_NEWER
 			if( m_enable )
 			{
+				for( int i = 0; i < AdditionalUsePasses.Length; i++ )
+				{
+					dataCollector.AddUsePass( AdditionalUsePasses[ i ], false );
+				}
+
 				for( int i = 0; i < InstancedPragmas.Length; i++ )
 				{
 					dataCollector.AddToPragmas( -1, InstancedPragmas[ i ] );
 				}
 				string functionBody = string.Empty;
 
-				string inputName = "input";
-				string uvCoord = "input.texcoord";
-				string vertexNormal = "input.normal";
-				string vertexPos = "input.vertex";
-
-				string functionHeader = string.Format( ApplyMeshModificationFunctionDefaultTemplate[ 0 ], dataCollector.SurfaceVertexStructure, inputName );
+				string functionHeader = string.Format( ApplyMeshModificationFunctionStandard[ 0 ], dataCollector.SurfaceVertexStructure );
 				IOUtils.AddFunctionHeader( ref functionBody, functionHeader );
-				IOUtils.AddFunctionLine( ref functionBody, ApplyMeshModificationFunctionDefaultTemplate[ 1 ] );
-				IOUtils.AddFunctionLine( ref functionBody,ApplyMeshModificationFunctionDefaultTemplate[ 2 ] );
-				IOUtils.AddFunctionLine( ref functionBody,string.Format( ApplyMeshModificationFunctionDefaultTemplate[ 3 ], vertexPos ) );
-				IOUtils.AddFunctionLine( ref functionBody,ApplyMeshModificationFunctionDefaultTemplate[ 4 ] );
-				IOUtils.AddFunctionLine( ref functionBody,ApplyMeshModificationFunctionDefaultTemplate[ 5 ] );
-				IOUtils.AddFunctionLine( ref functionBody,string.Format( ApplyMeshModificationFunctionDefaultTemplate[ 6 ], uvCoord ) );
-				IOUtils.AddFunctionLine( ref functionBody,string.Format( ApplyMeshModificationFunctionDefaultTemplate[ 7 ], uvCoord ) );
-				IOUtils.AddFunctionLine( ref functionBody,string.Format( ApplyMeshModificationFunctionDefaultTemplate[ 8 ], vertexPos ) );
-				IOUtils.AddFunctionLine( ref functionBody,string.Format( ApplyMeshModificationFunctionDefaultTemplate[ 9 ], vertexPos ) );
-				IOUtils.AddFunctionLine( ref functionBody,string.Format( ApplyMeshModificationFunctionDefaultTemplate[ 10 ], vertexNormal, uvCoord ) );
-				IOUtils.AddFunctionLine( ref functionBody,ApplyMeshModificationFunctionDefaultTemplate[ 11 ] );
-				IOUtils.AddFunctionLine( ref functionBody,string.Format( ApplyMeshModificationFunctionDefaultTemplate[ 12 ], inputName ) );
-				IOUtils.AddFunctionLine( ref functionBody, ApplyMeshModificationFunctionDefaultTemplate[ 13 ] );
+				for( int i = 1; i < ApplyMeshModificationFunctionStandard.Length; i++ )
+				{
+					IOUtils.AddFunctionLine( ref functionBody, ApplyMeshModificationFunctionStandard[ i ] );
+				}
 				IOUtils.CloseFunctionBody( ref functionBody );
+
+				//string inputName = "input";
+				//string uvCoord = "input.texcoord";
+				//string vertexNormal = "input.normal";
+				//string vertexPos = "input.vertex";
+
+				//string functionHeader = string.Format( ApplyMeshModificationFunctionDefaultTemplate[ 0 ], dataCollector.SurfaceVertexStructure, inputName );
+				//IOUtils.AddFunctionHeader( ref functionBody, functionHeader );
+				//IOUtils.AddFunctionLine( ref functionBody, ApplyMeshModificationFunctionDefaultTemplate[ 1 ] );
+				//IOUtils.AddFunctionLine( ref functionBody,ApplyMeshModificationFunctionDefaultTemplate[ 2 ] );
+				//IOUtils.AddFunctionLine( ref functionBody,string.Format( ApplyMeshModificationFunctionDefaultTemplate[ 3 ], vertexPos ) );
+				//IOUtils.AddFunctionLine( ref functionBody,ApplyMeshModificationFunctionDefaultTemplate[ 4 ] );
+				//IOUtils.AddFunctionLine( ref functionBody,ApplyMeshModificationFunctionDefaultTemplate[ 5 ] );
+				//IOUtils.AddFunctionLine( ref functionBody,string.Format( ApplyMeshModificationFunctionDefaultTemplate[ 6 ], uvCoord ) );
+				//IOUtils.AddFunctionLine( ref functionBody,string.Format( ApplyMeshModificationFunctionDefaultTemplate[ 7 ], uvCoord ) );
+				//IOUtils.AddFunctionLine( ref functionBody,string.Format( ApplyMeshModificationFunctionDefaultTemplate[ 8 ], vertexPos ) );
+				//IOUtils.AddFunctionLine( ref functionBody,string.Format( ApplyMeshModificationFunctionDefaultTemplate[ 9 ], vertexPos ) );
+				//IOUtils.AddFunctionLine( ref functionBody,string.Format( ApplyMeshModificationFunctionDefaultTemplate[ 10 ], vertexNormal, uvCoord ) );
+				//IOUtils.AddFunctionLine( ref functionBody,ApplyMeshModificationFunctionDefaultTemplate[ 11 ] );
+				//IOUtils.AddFunctionLine( ref functionBody,string.Format( ApplyMeshModificationFunctionDefaultTemplate[ 12 ], inputName ) );
+				//IOUtils.AddFunctionLine( ref functionBody, ApplyMeshModificationFunctionDefaultTemplate[ 13 ] );
+				//IOUtils.CloseFunctionBody( ref functionBody );
 
 				dataCollector.AddFunction( functionHeader, functionBody );
 				for( int i = 0; i < InstancedGlobalsDefault.Length; i++ )
 				{
 					dataCollector.AddToUniforms( -1, InstancedGlobalsDefault[ i ] );
 				}
-
-				dataCollector.AddVertexInstruction( string.Format( ApplyMeshModificationInstruction, "v" ) );
+				
+				dataCollector.AddVertexInstruction( string.Format( ApplyMeshModificationInstructionStandard, "v" ) );
 			}
 #endif
 		}

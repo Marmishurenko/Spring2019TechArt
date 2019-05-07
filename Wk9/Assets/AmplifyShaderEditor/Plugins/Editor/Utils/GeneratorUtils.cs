@@ -359,19 +359,21 @@ namespace AmplifyShaderEditor
 
 			if( !string.IsNullOrEmpty( propertyName ) )
 			{
+				string finalVarName = "uv" + index + propertyName;
+
 				dataCollector.AddToUniforms( uniqueId, "uniform float4 " + propertyName + "_ST;" );
 				if( size > WirePortDataType.FLOAT2 )
 				{
 					dataCollector.UsingHigherSizeTexcoords = true;
-					dataCollector.AddToLocalVariables( dataCollector.PortCategory, uniqueId, PrecisionType.Float, size, "uv" + propertyName, result );
-					dataCollector.AddToLocalVariables( dataCollector.PortCategory, uniqueId, "uv" + propertyName + ".xy = " + result + ".xy * " + propertyName + "_ST.xy + " + propertyName + "_ST.zw;" );
+					dataCollector.AddToLocalVariables( dataCollector.PortCategory, uniqueId, PrecisionType.Float, size, finalVarName, result );
+					dataCollector.AddToLocalVariables( dataCollector.PortCategory, uniqueId, finalVarName + ".xy = " + result + ".xy * " + propertyName + "_ST.xy + " + propertyName + "_ST.zw;" );
 				}
 				else
 				{
-					dataCollector.AddToLocalVariables( dataCollector.PortCategory, uniqueId, PrecisionType.Float, size, "uv" + propertyName, result + " * " + propertyName + "_ST.xy + " + propertyName + "_ST.zw" );
+					dataCollector.AddToLocalVariables( dataCollector.PortCategory, uniqueId, PrecisionType.Float, size, finalVarName, result + " * " + propertyName + "_ST.xy + " + propertyName + "_ST.zw" );
 				}
 
-				result = "uv" + propertyName;
+				result = finalVarName;
 			}
 			else if( !string.IsNullOrEmpty( scale ) || !string.IsNullOrEmpty( offset ) )
 			{

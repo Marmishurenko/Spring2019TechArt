@@ -843,7 +843,7 @@ namespace AmplifyShaderEditor
 			}
 		}
 
-		public string GetWorldNormal( PrecisionType precisionType, bool useMasterNodeCategory = true, MasterNodePortCategory customCategory = MasterNodePortCategory.Fragment, bool normalize = false )
+		public string GetWorldNormal( PrecisionType precisionType = PrecisionType.Float, bool useMasterNodeCategory = true, MasterNodePortCategory customCategory = MasterNodePortCategory.Fragment, bool normalize = false )
 		{
 			string result = string.Empty;
 			if( GetCustomInterpolatedData( TemplateInfoOnSematics.WORLD_NORMAL, WirePortDataType.FLOAT3, precisionType, ref result, useMasterNodeCategory, customCategory ) )

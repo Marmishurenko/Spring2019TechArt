@@ -9,31 +9,25 @@ AnimatorController:
   m_Name: frog
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Blend
+  - m_Name: WalkRun_TreeVal_X
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: WalkTreeValX
+  - m_Name: WalkRun_TreeVal_Y
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: WalkTreeValY
+  - m_Name: Idle_TreeVal_X
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: idle_val
-    m_Type: 1
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
-  - m_Name: idle_false_move_true
+  - m_Name: Idle_False_Move_True
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -73,7 +67,7 @@ BlendTree:
   m_Name: Blend Tree
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 0}
+    m_Motion: {fileID: 7400000, guid: f7c75561d9e41784192d9dce4a9e97bb, type: 2}
     m_Threshold: 0
     m_Position: {x: 0.26, y: -0.01}
     m_TimeScale: 1
@@ -81,63 +75,79 @@ BlendTree:
     m_DirectBlendParameter: Blend
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 0}
-    m_Threshold: 0.14285715
+    m_Motion: {fileID: 7400000, guid: 34d75c103e4ce2a47b8602854ef0e104, type: 2}
+    m_Threshold: 0.11111111
     m_Position: {x: 0, y: 0.25}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 0}
-    m_Threshold: 0.2857143
+    m_Motion: {fileID: 7400000, guid: 1960d27bcb55ea247ba3177d80f6a9a6, type: 2}
+    m_Threshold: 0.22222222
     m_Position: {x: -0.25, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 0}
-    m_Threshold: 0.42857143
+    m_Motion: {fileID: 7400000, guid: ce559c436dd72004184b05610ace1e0b, type: 2}
+    m_Threshold: 0.33333334
     m_Position: {x: 0, y: -0.25}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 0}
-    m_Threshold: 0.5714286
-    m_Position: {x: 1, y: 0}
+    m_Motion: {fileID: 7400000, guid: e826607ae048bce46acffcb97e1c95b5, type: 2}
+    m_Threshold: 0.44444445
+    m_Position: {x: 0.89, y: 0.43}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 0}
-    m_Threshold: 0.71428573
+    m_Motion: {fileID: 7400000, guid: 7a7f119cca515624da4c77b15e55196f, type: 2}
+    m_Threshold: 0.5555556
     m_Position: {x: 0, y: 1}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 0}
-    m_Threshold: 0.85714287
-    m_Position: {x: -1, y: 0}
+    m_Motion: {fileID: 7400000, guid: 59fed06197fcdbd48b9ad9ad7180e118, type: 2}
+    m_Threshold: 0.6666667
+    m_Position: {x: -0.79, y: 0.51}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 0}
-    m_Threshold: 1
-    m_Position: {x: 0, y: -1}
+    m_Motion: {fileID: 7400000, guid: 3fe1ffe425598054b88f0e84904711d3, type: 2}
+    m_Threshold: 0.7777778
+    m_Position: {x: -0.86, y: -0.35}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0
-  m_BlendParameter: WalkTreeValX
-  m_BlendParameterY: WalkTreeValY
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: 1b75dae23076b274bae564942ad73b60, type: 2}
+    m_Threshold: 0.8888889
+    m_Position: {x: -0.03, y: -0.96}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: WalkTreeValX
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: 5a3f66a832b49614f9a1d520065dbec8, type: 2}
+    m_Threshold: 1
+    m_Position: {x: 0.95, y: -0.55}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: WalkTreeValX
+    m_Mirror: 0
+  m_BlendParameter: WalkRun_TreeVal_X
+  m_BlendParameterY: WalkRun_TreeVal_Y
   m_MinThreshold: 0
   m_MaxThreshold: 1
   m_UseAutomaticThresholds: 1
